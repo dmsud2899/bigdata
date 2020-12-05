@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05-01 : 윈도우 열기</title>
+<script>
+	function load(URL)
+	{
+		window.open(URL, "myWin", "left=300,top=300,width=300height=300");
+	}
+</script>
+</head>
+<body>
+	<h3>window.open()으로 윈도우 열기</h3>
+	<hr>
+	<a href = "javascript:load('http://www.naver.com')">
+		네이버 홈페이지</a><br>
+	<a href = "javascript:load('http://www.daum.net')">
+		다음 홈페이지</a><br>
+	<a href = "javascript:load('http://www.google.com')">
+		구글 홈페이지</a>
+</body>
+</html>

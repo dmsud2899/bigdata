@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>03-11 : 문서의 동적 구성</title>
+	<script>
+		function createDIV()
+		{
+			var child2 = document.getElementById("id2");
+			
+			var obj = document.getElementById("parent");
+			var newDIV = document.createElement("div");
+			newDIV.innerHTML = "새로 생성된 DIV입니다";
+			newDIV.setAttribute ("id","myDiv");
+			newDIV.style.backgroundColor="yellow";
+			newDIV.onclick=function()
+			{
+				var p = this.parentElement; //부모 HTML태그 요소
+				p.removeChild(this);	//자신을 부모로부터 제거
+			};
+			//obj.appendChild(newDIV);
+			obj.insertBefore(newDIV,child2); //앞에 넣기
+		}
+	</script>
+</head>
+<body id ="parent">	<!-- DOM객체 삭제는 부모가 삭제해야 함 -->
+
+	<a href = "javascript:createDIV()">DIV객체생성</a>
+	<p id ="id1" />홍길동</p>
+	<p id ="id2" />전우치</p>
+	<p id ="id3" />손오공</p>
+	<p id ="id4" />해리포터</p>
+
+</body>
+</html>

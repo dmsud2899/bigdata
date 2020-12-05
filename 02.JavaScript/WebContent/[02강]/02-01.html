@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="UTF-8">
+	<title>02-01 : 객체 생성 및 활용</title>
+</head>
+<body>
+	<h3>객체 생성 및 활용</h3>
+	<hr>
+	<script>
+		// date객체 생성
+		var today = new Date();
+		console.log(1); //어디까지 찍혔는지 확인 할 수 있음
+		
+		//date객체의 toGMTString() 메소드 호출
+		document.write("현재 시간: " + today.toGMTString() + "<br>");
+		console.log(2);
+		document.write("현재 시간: " + today.toLocaleString() + "<br>");
+		console.log(3);
+		
+		//Sring 객체 생성 /프로퍼티읽기
+		var mystr = new String("자바스크립트 공부하기");
+		console.log(4);
+		document.write("mystr의 내용 : " + mystr + "<br>");
+		document.write("mystr의 길이 : " + mystr.length + "<br>");
+		//mystr.length=10l //이 문장은 오류이다.
+	</script>
+</body>
+</html>
