@@ -1,0 +1,15 @@
+/A1_MyFirstStream.class
+/A2_MyFirstStream2.class
+/B1_StringStream.class
+/B2_StringStream2.class
+/B3_DoubleStream.class
+/B4_ListStream.class
+/C1_FilterStream.class
+/C2_MapToInt.class
+/C3_MapToInt2.class
+/C4_ToyStream.class
+/D1_InstSortedStream.class
+/D2_PrimitiveSortedStream.class
+/E1_ReduceStream.class
+/F1_OpIntStream.class
+/ToyPriceInfo.class
