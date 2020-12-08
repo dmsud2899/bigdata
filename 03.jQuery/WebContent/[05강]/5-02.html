@@ -6,10 +6,10 @@
 	//hide()메서드와 show()메서드
 		$(document).ready(function ()
 		{
-			$('h1').next().toggle(function ()
+			$('h1').toggle(function ()
 				{ $(this).next().hide('slow'); },
-			function() 
-			{  $(this).next().show('slow'); });
+				function() 
+				{ $(this).next().show('slow'); });
 		});
 	</script>
 </head>
