@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery-1.7.js"></script>
+	<script>
+	//live() 메서드를 사용한 이벤트 연결
+	//1.7버전까지만 가능 
+	//현재 존재하는 h1태그 + 앞으로 계속 생성하는 h1태그에도 이벤트 연결
+		$(document).ready(function ()
+		{
+			$('h1').live('click', function ()
+			{
+				var length= $('h1').length;
+				var targetHTML = $(this).html();
+				$('#wrap').append('<h1>' + length + ' - ' + targetHTML + '</h1>');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id ="wrap">
+		<h1>Header</h1>
+	</div>
+</body>
+</html>
+

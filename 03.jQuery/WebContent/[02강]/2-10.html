@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		div
+		{
+			margin : 10px;
+			border: 3px Solid Black;
+			border-radius : 10px;
+			float : left;
+			width : 120px; height :120px;
+			text-align : center;
+		}
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	// XML 문서에서 데이터를 추출하는 예제
+	// find() > array로 
+	// 변수를 선언합니다.
+	// parseXML() 메서드를 사용해 문자열을 XML 문서 객체로 변경
+		var xml = '';
+		xml += '<friends>';	//문자열에 XML문서 입력
+		xml += '	<friend>';
+		xml += '		<name>홍길동</name>';
+		xml += '		<language>Ruby</language>';
+		xml += '	</friend>';
+		xml += '	<friend>';
+		xml += '		<name>전우치</name>';
+		xml += '		<language>Basic</language>';
+		xml += '	</friend>';
+		xml += '	<friend>';
+		xml += '		<name>손오공</name>';
+		xml += '		<language>C#</language>';
+		xml += '	</friend>';
+		xml += '</friends>';
+			
+		$(document).ready(function ()
+		{
+			//변수를 선언합니다.
+			var xmlDoc = $.parseXML(xml);
+			//$()메서드의 매개 변수에 생성한 XML문서 객체 입력
+			//$()메서드에 문서 객체를 바로 넣을 수 있음
+			//find()메서드를 사용해 friend태그 선택
+			//friend태근느 총 세개이므로 each()메서드 사용
+			//each()메서드 안에서 find()메서드를 한 번 더 사용해 데이터 추출
+			$(xmlDoc).find('friend').each(function (index)
+			{
+				//변수를 선언합니다.
+				var output = '';
+				output += '<div>';
+				output += '		<h1>' + $(this).find('name').text() + '</h1>';
+				output += '		<p>' + $(this).find('language').text() + '</p>';
+				output += '</div>';
+				
+				//출력합니다.
+				document.body.innerHTML += output;
+			});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+

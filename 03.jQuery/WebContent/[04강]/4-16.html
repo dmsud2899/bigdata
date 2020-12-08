@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*
+		{ margin:0px; padding:0px; }
+		div
+		{
+			margin:10px; padding:10px;
+			border: 3px Solid Black;
+			border-radius : 10px;
+		}	
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//on메서드의 delegate()메서드 대체 형태
+	//선택자 부분에서 이벤트 지속 범위 한정
+		$(document).ready(function ()
+		{
+			//on(이벤트이름,이벤트가지정될 선택자 입력,이벤트 핸들러 지정)
+			$('body').on('click', 'div', function ()
+			{
+				$(this).clone().appendTo('body')
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>$(selector).on()</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	</div>
+</body>
+</html>
+

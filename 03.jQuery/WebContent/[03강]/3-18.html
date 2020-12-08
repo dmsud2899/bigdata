@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	// html() 메서드의 매개변수로 입력한 함수 / setter3
+	// 두번째 매개변수 사용시
+	//원래 객체의 인덱스를 매개변수로 받아 html을 꾸며서 리턴
+		$(document).ready(function ()
+		{
+			$('h1').html(function (index, html)
+			{
+				return '★' + html + '★';
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Header - 0</h1>
+	<h1>Header - 1</h1>
+	<h1>Header - 2</h1>
+</body>
+</html>
+

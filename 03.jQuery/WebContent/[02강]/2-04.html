@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//chaining을 사용해 한 줄로 서로 다른 문서 객체에 스타일 적용 가능
+		$(document).ready(function ()
+		{
+			$('h1').css('background', 'Orange').filter(':even').css('color','Red')
+		});
+	</script>
+</head>
+<body>
+	<h1>Header - 0</h1>
+	<h1>Header - 1</h1>
+	<h1>Header - 2</h1>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//trigger() 메서드
+	//이벤트를 발생시킴
+		$(document).ready(function ()
+		{
+			//이벤트 연결
+			$('h1').click(function ()
+			{
+				// this = h1
+				$(this).html(function (index, html)
+				{
+					return html + '★';
+				});
+			})
+			//1초마다 함수 실행
+			setInterval(function ()
+			{
+				$('h1').last().trigger('click');
+			}, 1000)
+		});
+	</script>
+</head>
+<body>
+	<h1>Start: </h1>
+	<h1>Start: </h1>
+</body>
+</html>
+<!-- 
+함수 호출로도 작성 가능
+오토마우스, 자동실행프로그램에서 사용
+이벤트 발생하면서 cpu 사용됨
+오라클에도 트리거가 있음
+-->

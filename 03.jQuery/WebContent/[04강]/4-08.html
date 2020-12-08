@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//trigger()메서드의 2번 형태 실행
+		$(document).ready(function ()
+		{
+			//이벤트 연결
+			$('h1').click(function(event, data1, data2)
+			{
+				alert(data1 + ' : ' + data2);
+			});
+			
+			//이벤트 강제 발생	/어레이 위치에 강제 클릭된 것
+			$('h1').eq(0).trigger('click', [273, 52]);
+		});
+	</script>
+</head>
+<body>
+	<h1>TRIGGER</h1>
+</body>
+</html>
+

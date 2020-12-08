@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//함수를 매개 변수로 입력하기
+		$(document).ready(function ()
+		{
+			$('h1').addClass(function (index)
+			{
+				return 'class' + index;
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Header - 0</h1>
+	<h1>Header - 1</h1>
+	<h1>Header - 2</h1>
+</body>
+</html>
+

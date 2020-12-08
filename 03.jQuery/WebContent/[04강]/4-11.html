@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*
+		{
+			margin : 5px; padding:5px;
+			border : 3px solid Black;
+		}
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//return false : 
+	//stopPropagation()메서드와 preventDefault()메서드를 함께
+		$(document).ready(function ()
+		{
+			$('a').click(function (event)
+			{
+				$(this).css('background-color', 'Blue');
+					return false;
+			});
+			$('h1').click(function ()
+			{
+				$(this).css('background-color', 'Red')
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>
+		<a href = "http://google.com">Google</a> <!-- defualt 이벤트 -->
+	</h1>
+</body>
+</html>
+

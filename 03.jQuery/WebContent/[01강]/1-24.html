@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.high_light{background:Yellow;}
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+		//플러그인간의 충돌을 제거 /더 이상 jQuery의 식별자 $사용 불가
+		$.noConflict();
+		var J = jQuery;
+		
+		//jQeury를 사용함 //$대신 J사용
+		J(document).ready(function ()
+		{
+			alert("111");
+			J('h1').removeClass('high_light');
+		});
+	</script>
+</head>
+<body>
+	<h1 class = "high_light">item - 0</h1>
+	<h2 class = "high_light">item - 1</h2>
+</body>
+</html>
+

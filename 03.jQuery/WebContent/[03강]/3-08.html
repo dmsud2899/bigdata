@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//첫 번째 매개 변수에 삭제하려는 속성의 이름 입력
+		$(document).ready(function ()
+		{
+			// h1 태그에 있는 data-index(=속성이라고 볼 수 있음) 속성 제거
+			$('h1').removeAttr('data-index');
+		});
+	</script>
+</head>
+<body>
+	<h1 data-index="0">Header - 0</h1>
+	<h1 data-index="1">Header - 1</h1>
+	<h1 data-index="2">Header - 2</h1>
+</body>
+</html>
+

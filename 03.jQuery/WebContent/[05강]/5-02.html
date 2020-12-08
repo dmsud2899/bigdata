@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery-1.7.js"></script>
+	<script>
+	//hide()메서드와 show()메서드
+		$(document).ready(function ()
+		{
+			$('h1').next().toggle(function ()
+				{ $(this).next().hide('slow'); },
+			function() 
+			{  $(this).next().show('slow'); });
+		});
+	</script>
+</head>
+<body>
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h1>Lorem ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, consetetur adipiscing elit.</p>
+	</div>
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h1>Lorem ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, consetetur adipiscing elit.</p>
+	</div>
+</body>
+</html>
+
+<!-- 4-02와 5-02 비교
+다시 확인해보기 -->

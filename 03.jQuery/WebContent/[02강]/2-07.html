@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//eq()메서드 / 매개변수에 숫자(양수,음수) 입력
+	//음수를 입력하면 뒤쪽 기준으로 선택
+		$(document).ready(function ()
+		{
+			$('h1').eq(0).css('background', 'Orange');
+			$('h1').eq(-1).css('background', 'Red');
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Header - 0</h1>
+		<h1>Header - 1</h1>
+		<h1>Header - 2</h1>
+	</div>
+</body>
+</html>
+

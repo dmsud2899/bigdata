@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//add() 메서드 : 문서 객체의 chaining을 더 유연하게 도와줌
+		$(document).ready(function ()
+		{
+			// h1을 먼저 선택 하고 h2선택한 것을 더함
+			$('h1').css('background', 'Gray').add('h2').css('float','left')
+		});
+	</script>
+</head>
+<body>
+	<h1>Header - 0</h1>
+	<h2>Header - 1</h2>
+	<h1>Header - 2</h1>
+	<h2>Header - 3</h2>
+	<h1>Header - 4</h1>
+</body>
+</html>
+

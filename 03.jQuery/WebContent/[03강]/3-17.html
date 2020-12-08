@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//index()를 매개 변수로 setter2
+	//원래 객체의 인덱스를 매개변수로 받아 html을 꾸며서 리턴
+		$(document).ready(function ()
+		{
+			$('div').html(function (index)
+			{
+				return '<h1>Header-' + index + '</h1>';
+			});
+		});
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+

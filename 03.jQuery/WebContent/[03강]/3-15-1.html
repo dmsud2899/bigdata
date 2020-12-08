@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	// html() /setter
+	// 매개변수로 입력하고자 하는 HTMl문자열 입력
+		$(document).ready(function ()
+		{
+			//html() 메서드를 사용한 문서 객체 내부 문자 추가
+			
+			for( i=0; i<$('div').length; i++)
+			{
+				var html = $('div').eq(i).html();
+				$('div').eq(i).html(html + '<h1>$().html Method</h1>');
+			}
+		});
+	</script>
+</head>
+<body>
+	<div>홍길동</div>
+	<div>전우치</div>
+	<div>손오공</div>
+</body>
+</html>
+

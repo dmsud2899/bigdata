@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.first {color:Red;}
+		.second {color:Pink;}
+		.third {color:Orange;}
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//문서 객체의 스타일 검사 / getter
+		$(document).ready(function ()
+		{
+			//변수를 선언
+			var color = $('h1').css('color');
+			//var color = $('h1').eq(2).css('color');
+			
+			//출력 / eq() 지정안하면 첫번째 값의 속성만 출력
+			alert(color);
+		});
+	</script>
+</head>
+<body>
+	<h1 class = "first">Header - 0</h1>
+	<h1 class = "second">Header - 1</h1>
+	<h1 class = "third">Header - 2</h1>
+</body>
+</html>
+

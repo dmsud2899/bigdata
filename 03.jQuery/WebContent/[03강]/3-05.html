@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//document가 ready되면 function 실행
+		$(document).ready(function ()
+		{
+			//변수를 선언합니다. /setter
+			var src = $('img').attr('width', 200);
+			console.log(src);
+			//출력합니다
+			alert(src);
+		});
+	</script>
+</head>
+<body>
+<!-- img는 블럭타입 아님.-->
+	<img src ="Chrysanthemum.jpg" />
+	<img src ="Desert.jpg" />
+	<img src ="Hydrangeas.jpg" />
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*
+		{
+			margin : 5px; padding:5px;
+			border : 3px solid Black;
+		}
+	</style>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//기본 이벤트 제거 이벤트 전달을 막는 메서드
+		$(document).ready(function ()
+		{
+			$('a').click(function (event)
+			{
+				$(this).css('background-color', 'Blue');
+				//stipPropagation() : 이벤트 전달 제거
+				//h1태그의 click이벤트가 실행되지 않음
+				//preventDefault() : 기본 이벤트 제거
+				//anchor태그의 defualt 이벤트가 실행되지 않음
+				event.stopPropagation();
+				event.preventDefault();
+			});
+			$('h1').click(function ()
+			{
+				$(this).css('background-color', 'Red')
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>
+		<a href = "http://google.com">Google</a> <!-- defualt 이벤트 -->
+	</h1>
+</body>
+</html>
+

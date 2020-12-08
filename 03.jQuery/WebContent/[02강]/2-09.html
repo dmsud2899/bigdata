@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//is() 메서드
+	// 매개변수로 선택자 입력
+	//선택한 객체가 선택자와 일치하는지 판별해 리턴
+		$(document).ready(function ()
+		{
+			//h1태그 중 클래스 속성이 같으면, 바탕을 오렌지색으로
+			$('h1').each(function ()
+			{
+				if ($(this).is('.select'))
+				{
+					$(this).css('background', 'Orange')
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 class="select">Header - 0</h1>
+	<h1>Header - 1</h1>
+	<h1 class="select">Header - 2</h1>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>XMLHttpRequest</title>
+</head>
+<body>
+	<script>
+		//XMLHttpRequest 객체 생성
+		var request = new XMLHttpRequest();
+		request.open('GET', 'data.html', false);
+		
+		//Ajax를 수행
+		request.send();
+		
+		//출력
+		document.body.innerHTML += request.responseText;
+	</script>
+</body>
+</html>

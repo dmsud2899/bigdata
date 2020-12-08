@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+		$(document).ready(function ()
+		{
+			//setter3 / 속성추가
+			$('img').attr({
+				width : function (index)
+				{
+					return (index + 1) * 100;
+				},
+				height : 100
+			});
+		});
+	</script>
+</head>
+<body>
+<!-- img는 블럭타입 아님.-->
+	<img src ="Chrysanthemum.jpg" />
+	<img src ="Desert.jpg" />
+	<img src ="Hydrangeas.jpg" />
+</body>
+</html>
+
