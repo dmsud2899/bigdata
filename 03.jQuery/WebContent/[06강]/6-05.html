@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		//XMLHttpReqeust 객체 생성
+		var request = createRequest();
+		request.onreadystatechange = function (event)
+		{
+			//출력
+			alert(request.readyState);
+		};
+		request.open('GET','data.html',true);
+		request.send();
+	</script>
+</body>
+</html>

@@ -9,6 +9,9 @@
 		//XMLHttpRequest 객체 생성
 		var request = new XMLHttpRequest();
 		request.open('GET', 'data.html', false);
+		// http://localhost:8081/mytest/data.html = 절대 url
+		// ./data.html = 상대 url
+		// data.html = 파일명
 		
 		//Ajax를 수행
 		request.send();

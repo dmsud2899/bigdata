@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	//XML 요청과 조작
+	var request = new XMLHttpRequest();
+	request.onreadystatechange = function (event)
+	{
+		if(request.readyState == 4)
+		{
+			if(request.status == 200)
+			{
+				//변수 선언
+				var xml = request.responseXML;
+				
+				//데이터 가공
+				var names = xml.getElementsByTagName('name');
+				var prices = xml.getElementsByTagName('price');
+				
+				for(var i = 0; i<names.length; i++)
+				{
+					var name = names[i].childNodes[0].nodeValue;
+					var pirce = prices[i].childNodes[0].nodeValue;
+					document.body.innerHTML += '<h1>' + name + '</h1>';
+					document.body.innerHTML += '<h2>' + price + '</h2>';
+				}
+				
+			}
+		};
+	};
+		request.open('GET','data.xml',true);
+		request.send();
+	</script>
+</body>
+</html>
+<!-- 객체로 변화는 과정 = 파싱 -->

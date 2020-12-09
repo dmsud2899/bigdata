@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		//XMLHttpReqeust 객체 생성
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function (event)
+		{
+			if(request.readyState == 4)
+			{
+				if(request.status == 200) //재확인
+				{
+					var json = eval('(' + request.responseText + ')');
+					console.log(json);
+				};
+			};
+		};
+		request.open('GET','data.json',true);
+		request.send();
+	</script>
+</body>
+</html>
+<!-- 공공DB에서 데이터 가져올 때 사용
+f12 > data.json 클릭 > preview -->
