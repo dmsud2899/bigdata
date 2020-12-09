@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Ajax Basic</title>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//요청 매개변수 전달 형태 5
+	//serializeArray ( ) 메서드는 배열로 리턴
+		$(document).ready(function ()
+		{
+			//submit 이벤트 연결
+			$('#my-form').submit(function (event)
+			{	
+				//Ajax 요청 수행
+				$('#wrap').load('type.jsp', $(this).serializeArray());
+				
+				//기본 이벤트 제거
+				event.preventDefault();
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="my-form">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input id = "name" name="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input id = "price" name="price" type="text" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Get Ajax String" />
+	</form>
+	<div id ="wrap">
+	</div>
+</body>
+</html>

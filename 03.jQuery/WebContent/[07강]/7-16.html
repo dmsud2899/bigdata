@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Ajax Basic</title>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//요청 매개변수 전달 형태 2
+		$(document).ready(function ()
+		{
+			//submit 이벤트 연결
+			$('#my-form').submit(function (event)
+			{
+				// 입력 양식의 value속성을 가져옴
+				var name = $('#name').val();
+				var price = $('#price').val();
+				
+				//Ajax 요청 수행
+				var url = 'type.jsp?name=' + name + '&price=' + price;
+				//앞에 : key값, 뒤 :변수(var)
+				var data ={ name: name, price: price };
+				var params = $.param(data);
+				$('#wrap').load(url, params);
+				
+				//기본 이벤트 제거
+				event.preventDefault();
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="my-form">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input id = "name" name="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input id = "price" name="price" type="text" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Get Ajax String" />
+	</form>
+	<div id ="wrap">
+	</div>
+</body>
+</html>

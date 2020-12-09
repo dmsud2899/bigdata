@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Ajax Basic</title>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//보조메서드
+	//객체는 string 아님
+	//serialize는 쿼리스트링으로 만듬
+	//serializeArray는 객체로 만듬
+		$(document).ready(function ()
+		{
+			//submit 이벤트 연결
+			$('#my-form').submit(function (event)
+			{	
+				//변수 선언
+				var serialize = $(this).serialize();
+				var serializeArray = $(this).serializeArray();
+				
+				//출력
+				$('<h1></h1>').text(serialize).appendTo('#wrap');
+				$('<h1></h1>').text(serializeArray).appendTo('#wrap');
+				
+				//기본 이벤트 제거
+				event.preventDefault();
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="my-form">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input id = "name" name="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input id = "price" name="price" type="text" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Get Ajax String" />
+	</form>
+	<div id ="wrap">
+	</div>
+</body>
+</html>
+<!-- 서버로 보내지 않고 h1에서 출력 -->

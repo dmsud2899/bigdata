@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Ajax Basic</title>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+	//▪ $.param ( ) 메서드는 객체를 쿼리 문자열로 바꿈
+    //다음 코드는 data 객체를 $.param ( ) 메서드를 사용해 쿼리 문자열로 바꾼 뒤 출력
+		$(document).ready(function ()
+			{
+				//변수 선언
+				var data = 
+				{
+					name: 'HongGilDong',
+					region: 'Seoul',
+				};
+				
+				console.log( $.param(data) );
+				//출력
+				$('<h1></h1>').text($.param(data)).appendTo('body');
+			});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

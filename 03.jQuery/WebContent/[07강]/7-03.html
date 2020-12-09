@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Ajax Basic</title>
+	<script src = "http://code.jquery.com/jquery.js"></script>
+	<script>
+		$(document).ready(function ()
+		{
+			$.ajax
+			({	
+				url: 'type.jsp',
+				type: 'GET',
+				data:
+				{
+					name : 'test',
+					price: '100'
+				},
+				success: function (data)
+				{
+					$('body').append(data);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
