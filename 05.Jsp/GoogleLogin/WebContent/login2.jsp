@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="http://code.jquery.com/jquery.js"></script>
 
-	<meta name="google-signin-client_id" content="986968527500-t3qpn410h9c8d4lj0528ml9nnaibq3hr.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="key.apps.googleusercontent.com">
 
 	<script>
     function onSignIn(googleUser) {
